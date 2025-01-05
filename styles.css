@@ -138,6 +138,30 @@
     font-size: 1.2rem;
     color: white;
   }
+
+  /* Social Links Styling */
+.social-links {
+  display: flex;
+  justify-content: center; /* Center the icons */
+  gap: 20px; /* Space between the icons */
+  margin-top: 40px; /* Add spacing above the links */
+}
+
+.social-links a {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.social-links img {
+  width: 50px; /* Set the icon size */
+  height: 50px;
+  /* filter: brightness(0) invert(1); Makes icons white on dark backgrounds */
+  transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
   
   /* Music Section */
   .music {
