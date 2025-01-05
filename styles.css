@@ -1,0 +1,744 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: black;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1db954;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #1db954;
+  }
+  
+  .cta-btn {
+    padding: 10px 20px;
+    border: 1px solid #1db954;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #1db954;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background: #1db954;
+    color: black;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 50px;
+    background: linear-gradient(135deg, #1db954, #121212);
+  }
+  
+  .hero-content {
+    max-width: 50%;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: white;
+  }
+  
+  .discover-btn {
+    padding: 10px 30px;
+    border: none;
+    background: black;
+    color: #1db954;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .discover-btn:hover {
+    background: #1db954;
+    color: black;
+  }
+  
+  /* Hero Image */
+  .hero-image {
+    max-width: 50%;
+  }
+  
+  .hero-image img {
+    max-width: 80%;
+    margin-top: 15%;
+    height: auto;
+    border-radius: 10px;
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); */
+  }
+  
+  /* About Section */
+  .about {
+    padding: 50px;
+    text-align: center;
+    background: black;
+  }
+  
+  .about h2 {
+    font-size: 2.5rem;
+    color: #1db954;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  /* Music Section */
+  .music {
+    padding: 50px;
+    text-align: center;
+    background: #121212;
+  }
+  
+  .music h2 {
+    font-size: 2.5rem;
+    color: #1db954;
+    margin-bottom: 20px;
+  }
+  
+  .music-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .music-list li {
+    margin: 10px 0;
+  }
+  
+  .music-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .music-list a:hover {
+    color: #1db954;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: black;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .hero-content {
+      max-width: 100%;
+    }
+  
+    .hero h1 {
+      font-size: 3rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .hero-image {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+
+
+
+/* Music Section */
+.music {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #121212;
+    color: white;
+  }
+  
+  /* Rotating Spotify Disc */
+
+  .spotify-disc {
+    margin: 0 auto 30px;
+    background-color: #19d860;
+    width: 200px;
+    height: 200px;
+    animation: rotateDisc 10s linear infinite;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 10px rgba(29, 185, 84, 0.5), 
+                0 0 40px 20px rgba(29, 185, 84, 0.3), 
+                0 0 60px 30px rgba(29, 185, 84, 0.2); /* Green circular glow */
+  }
+
+
+  
+  .spotify-disc img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  /* Disc Animation */
+  @keyframes rotateDisc {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Music Cards */
+  
+    .music-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+  
+  .music-card {
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    border: 1px solid #1db954;
+    border-radius: 10px;
+    width: calc(50% - 20px); /* 2 cards in a row for desktop */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .music-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+  
+  .music-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .music-card a {
+    text-decoration: none;
+    color: #1db954;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    flex: 1; /* Ensures the text stretches to fill the space */
+  }
+  
+  .music-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .music-card {
+      width: 100%; /* Single card per row for mobile */
+    }
+  
+    .music-card img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .music-card a {
+      font-size: 1rem; /* Adjust font size for mobile */
+    }
+  }
+
+
+
+
+  /* Section 2 */
+
+  /* Section Content */
+.content {
+    padding: 150px 50px;
+    background: black;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #aaaaaa;
+  }
+  
+  .content-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+ /* Left Content Styling */
+.left-content {
+    flex: 30%; /* Take 50% of the width */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+  }
+  
+  .left-content img {
+    width: 60%; /* Adjust width to fit within the container */
+    max-width: 450px; 
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Add shadow for aesthetics */
+  }
+  
+  .right-content {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Card Styling */
+.card {
+    display: flex;
+    background: #222;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .card-image img {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+  
+  .card-text {
+    flex: 1;
+  }
+  
+  .card-text h4 {
+    font-size: 1rem;
+    color: #1db954;
+    margin-bottom: 5px;
+  }
+  
+  .card-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .card-text p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #aaaaaa;
+  }
+  
+  .card-footer-text {
+    font-size: 0.9rem;
+    margin-top: 15px;
+    color: #aaaaaa;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: #1db954;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .button.secondary {
+    background: black;
+    border: 1px solid #1db954;
+    color: #1db954;
+  }
+  
+  .button:hover {
+    background: white;
+    color: black;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column;
+    }
+  
+    .card-image img {
+      margin: 0 auto 15px;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .content-grid {
+      flex-direction: column;
+    }
+  
+    .left-content {
+      margin-bottom: 20px;
+    }
+
+    /* Responsive Design for Cards */
+
+    .card-content{
+        display: block;
+    }
+
+    .content-grid {
+        flex-direction: column; /* Stack left and right content vertically */
+        gap: 20px; /* Add spacing between sections */
+      }
+    
+      .card {
+        display: flex;
+        flex-direction: column; /* Stack everything vertically */
+        align-items: center; /* Center all items */
+        text-align: center; /* Center-align text */
+        padding: 20px; /* Adjust padding */
+        margin: 15px 0; /* Add spacing between cards */
+        gap: 20px; /* Add spacing between items inside the card */
+      }
+    
+      .card-image img {
+        width: 100%; /* Image takes full width */
+        max-width: 300px; /* Limit the size */
+        border-radius: 10px; /* Rounded corners */
+      }
+    
+      .card-text h3 {
+        font-size: 1.5rem; /* Adjust heading size */
+        margin-bottom: 10px;
+        color: white;
+      }
+    
+      .card-text p {
+        font-size: 1rem; /* Adjust paragraph size */
+        color: #aaaaaa;
+        margin-bottom: 15px;
+      }
+    
+      .buttons {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add spacing between buttons */
+        width: 100%; /* Buttons take full width */
+      }
+    
+      .button {
+        width: 100%; /* Full width button */
+        padding: 10px 0;
+        font-size: 1rem; /* Adjust font size */
+      }
+    
+      .card-footer-text {
+        font-size: 0.9rem;
+        color: #aaaaaa;
+        margin-top: 15px;
+        text-align: center;
+      }
+
+    }
+
+
+    /* Whole image Section */
+.fullscreen-section {
+    position: relative;
+    height: 140vh; /* Full viewport height */
+    background: url('assets/images/large_img.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .content-overlay {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay for text readability */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .content-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .content-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: #1db954;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .button:hover {
+    background: white;
+    color: black;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .content-overlay h1 {
+      font-size: 2rem; /* Adjust heading size */
+    }
+  
+    .content-overlay p {
+      font-size: 1rem; /* Adjust paragraph size */
+    }
+  
+    .button {
+      padding: 10px 15px;
+      font-size: 1rem; /* Adjust button size */
+    }
+  }
+
+  /* Contact section */
+
+ /* Contact Section */
+ .contact-section {
+    padding: 50px 20px;
+    background: radial-gradient(circle, #1db954, #1e1e1e); /* Circular Gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Contact Container with Glowing Borders */
+  .contact-container {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    background: #1e1e1e;
+    padding: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 0;
+    border: #255c10 solid 1px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Base background */
+  .contact-container::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+  }
+  
+  /* Glowing Effect */
+  .contact-container::before {
+    content: "";
+    background: linear-gradient(
+      90deg, /* Clockwise movement */
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-size: 400%;
+    z-index: -1;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    filter: blur(15px);
+    animation: flowingGlow 8s linear infinite;
+    border-radius: 15px;
+    opacity: 1;
+  }
+  
+  /* Glowing Animation */
+  @keyframes flowingGlow {
+    0% { background-position: 0 0; }
+    50% { background-position: 200% 0; }
+    100% { background-position: 0 0; }
+  }
+  
+  /* Contact Box Content */
+  .contact-box {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+  
+  .contact-box h2 {
+    font-size: 2rem;
+    color: #1db954;
+    margin-bottom: 20px;
+  }
+  
+  .contact-box p {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .contact-details p {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form label {
+    font-size: 1rem;
+    color: white;
+    text-align: left;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #1db954;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #aaaaaa;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #1db954;
+  }
+  
+  .contact-form button {
+    padding: 10px 20px;
+    background-color: #1db954;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 30px;
+    }
+  
+    .contact-box h2 {
+      font-size: 1.8rem;
+    }
+  
+    .contact-box p,
+    .contact-details p {
+      font-size: 0.9rem;
+    }
+  }
